@@ -115,9 +115,12 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="2002" />
     <option name="y" value="139" />
@@ -211,11 +214,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/quentindupont/Downloads/_00_ASBank2023",
+    "last_opened_file_path": "D:/Coding/Java/qualiteDev",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Subversion",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -231,6 +238,36 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.80">
+    <configuration name="_00_ASBank2023 [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="_00_ASBank2023 [clean,install...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -240,7 +277,7 @@
             <option name="environmentProperties">
               <map />
             </option>
-            <option name="jreName" value="#USE_PROJECT_JDK" />
+            <option name="jreName" value="1.8" />
             <option name="mavenProperties">
               <map />
             </option>
@@ -278,7 +315,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.80" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.80" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8089/_00_ASBank2023" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8087/_00_ASBank2023" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="_00_ASBank2023:war exploded">
@@ -289,7 +326,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed__00_ASBank2023_3" />
-        <option name="HTTP_PORT" value="8089" />
+        <option name="HTTP_PORT" value="8087" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -366,13 +403,14 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Maven._00_ASBank2023 [clean,install]" />
       <item itemvalue="Maven._00_ASBank2023 [clean,install...]" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.80" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-    <configuration>C:\Users\stephane.joyeux\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\quent\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
@@ -390,7 +428,11 @@
       <workItem from="1695735870234" duration="1754000" />
       <workItem from="1695738033395" duration="629000" />
       <workItem from="1695747005393" duration="6246000" />
-      <workItem from="1696426181112" duration="2686000" />
+      <workItem from="1696676672111" duration="215000" />
+      <workItem from="1696676897268" duration="3000" />
+      <workItem from="1696676986542" duration="3472000" />
+      <workItem from="1696696010665" duration="686000" />
+      <workItem from="1697832678988" duration="399000" />
     </task>
     <servers />
   </component>
