@@ -214,7 +214,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Coding/Java/qualiteDev",
+    "last_opened_file_path": "/Users/quentindupont/Code/Java/qualiteDev",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -237,7 +237,7 @@
       <recent name="C:\Users\hugot\Desktop\Qualite-dev\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.80">
+  <component name="RunManager" selected="Maven._00_ASBank2023 [clean,install]">
     <configuration name="_00_ASBank2023 [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -315,7 +315,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.80" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.80" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8087/_00_ASBank2023" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/_00_ASBank2023" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="_00_ASBank2023:war exploded">
@@ -326,7 +326,6 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed__00_ASBank2023_3" />
-        <option name="HTTP_PORT" value="8087" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -433,6 +432,7 @@
       <workItem from="1696676986542" duration="3472000" />
       <workItem from="1696696010665" duration="686000" />
       <workItem from="1697832678988" duration="399000" />
+      <workItem from="1697879048408" duration="256000" />
     </task>
     <servers />
   </component>
