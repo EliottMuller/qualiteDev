@@ -1,5 +1,6 @@
 package com.iut.banque.dao;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -203,7 +204,8 @@ public class DaoHibernate implements IDao {
 				if (user == null) {
 					return false;
 				}
-				return (userPwd.equals(user.getUserPwd()));
+				BCrypt.Result result = BCrypt.verifyer().verify(userPwd.toCharArray(), user.getUserPwd());
+				return (result.verified);
 			}
 		}
 	}

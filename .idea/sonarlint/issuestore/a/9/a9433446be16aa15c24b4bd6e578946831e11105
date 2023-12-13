@@ -1,0 +1,11 @@
+
+Q
+java:S1141¾"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+J
+java:S1948"(Make "client" transient or serializable.(‚Ø–øùÿÿÿÿ8•Çë‡·1
+D
+java:S1948"(Make "banque" transient or serializable.(›ÒËw8•Çë‡·1
+J
+java:S1948"(Make "compte" transient or serializable.(¾òìƒþÿÿÿÿ8•Çë‡·1
+@	java:S106Q"+Replace this use of System.out by a logger.(’Â÷®
+=	java:S131”""Add a default case to this switch.(Ö‘ò°úÿÿÿÿ
