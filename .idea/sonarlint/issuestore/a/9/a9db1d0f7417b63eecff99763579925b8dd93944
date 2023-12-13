@@ -1,0 +1,11 @@
+
+=
+java:S3010-" Remove this assignment of "dao".(–…äï8¤Áù‡·1
+G	java:S106+"+Replace this use of System.out by a logger.(Ð—Íè8¤Áù‡·1
+L	java:S106,"+Replace this use of System.out by a logger.(¡þšøÿÿÿÿ8¤Áù‡·1
+X	java:S125."<This block of commented-out lines of code should be removed.(ÇÖÛò8¤Áù‡·1
+G	java:S1065"+Replace this use of System.out by a logger.(Ð—Íè8¤Áù‡·1
+L	java:S1066"+Replace this use of System.out by a logger.(¡þšøÿÿÿÿ8¤Áù‡·1
+W	java:S1257"<This block of commented-out lines of code should be removed.(Ššœ8¤Áù‡·1
+F
+java:S1905A")Remove this unnecessary cast to "Compte".(”ÊÄÂ8‰õð‡·1

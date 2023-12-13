@@ -1,0 +1,15 @@
+
+t
+java:S2293g"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯€‘ıÿÿÿÿÿ
+|
+java:S2293à"YReplace the type specification in this constructor call with the diamond operator ("<>").(àñ¶ûÿÿÿÿ8¬Àù‡·1
+U
+java:S2589Ğ"7Remove this expression which always evaluates to "true"(»°è8Àå‡·1
+W
+java:S11613":Add the "@Override" annotation above this method signature(ÙŠô8Âå‡·1
+W
+java:S1161{":Add the "@Override" annotation above this method signature(Á»›ê8Æå‡·1
+S
+java:S6353¶"<Use concise character class syntax '\\d' instead of '[0-9]'.(±†ùî
+S
+java:S6353Ä"<Use concise character class syntax '\\d' instead of '[0-9]'.(î¾Àë

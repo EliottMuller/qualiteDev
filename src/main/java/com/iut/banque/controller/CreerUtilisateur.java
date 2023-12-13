@@ -1,5 +1,7 @@
 package com.iut.banque.controller;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
+
 import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -123,9 +125,7 @@ public class CreerUtilisateur extends ActionSupport {
 	}
 
 	/**
-	 * @param user
-	 *            the user to set
-	 */
+     */
 	public void setClient(boolean client) {
 		this.client = client;
 	}
@@ -153,6 +153,17 @@ public class CreerUtilisateur extends ActionSupport {
 		ApplicationContext context = WebApplicationContextUtils
 				.getRequiredWebApplicationContext(ServletActionContext.getServletContext());
 		this.banque = (BanqueFacade) context.getBean("banqueFacade");
+	}
+
+	public String hashPassword(String password) throws IllegalArgumentException {
+		String bcryptHashString = BCrypt.withDefaults().hashToString(12, password.toCharArray());
+		BCrypt.Result verifyResult = BCrypt.verifyer().verify(password.toCharArray(), bcryptHashString);
+		if (verifyResult.verified) {
+			return bcryptHashString;
+		}
+		else {
+			throw new IllegalArgumentException("Error during verify process.");
+		}
 	}
 
 	/**
@@ -201,9 +212,9 @@ public class CreerUtilisateur extends ActionSupport {
 	public String creationUtilisateur() {
 		try {
 			if (client) {
-				banque.createClient(userId, userPwd, nom, prenom, adresse, male, numClient);
+				banque.createClient(userId, hashPassword(userPwd), nom, prenom, adresse, male, numClient);
 			} else {
-				banque.createManager(userId, userPwd, nom, prenom, adresse, male);
+				banque.createManager(userId, hashPassword(userPwd), nom, prenom, adresse, male);
 			}
 			this.message = "Le nouvel utilisateur avec le user id '" + userId + "' a bien été crée.";
 			this.result = "SUCCESS";
