@@ -155,7 +155,7 @@ public class CreerUtilisateur extends ActionSupport {
 		this.banque = (BanqueFacade) context.getBean("banqueFacade");
 	}
 
-	public String hashPassword(String password) throws IllegalArgumentException {
+	public static String hashPassword(String password) throws IllegalArgumentException {
 		String bcryptHashString = BCrypt.withDefaults().hashToString(12, password.toCharArray());
 		BCrypt.Result verifyResult = BCrypt.verifyer().verify(password.toCharArray(), bcryptHashString);
 		if (verifyResult.verified) {
