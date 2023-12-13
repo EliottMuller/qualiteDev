@@ -7,6 +7,7 @@ import com.iut.banque.modele.Utilisateur;
 import org.junit.Before;
 import org.junit.Test;
 
+import static com.iut.banque.controller.CreerUtilisateur.hashPassword;
 import static org.junit.Assert.*;
 
 public class TestsCreerUtilisateur {
@@ -20,7 +21,7 @@ public class TestsCreerUtilisateur {
     public void testHashPassword() {
         String plainPassword = "secretPassword";
         try {
-            String hashedPassword = creerUtilisateur.hashPassword(plainPassword);
+            String hashedPassword = hashPassword(plainPassword);
             assertNotEquals(plainPassword, hashedPassword);
         } catch (IllegalArgumentException e) {
             fail("Exception thrown: " + e.getMessage());
