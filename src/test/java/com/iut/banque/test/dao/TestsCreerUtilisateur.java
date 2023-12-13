@@ -12,8 +12,6 @@ import static org.junit.Assert.*;
 
 public class TestsCreerUtilisateur {
 
-    private final CreerUtilisateur creerUtilisateur = new CreerUtilisateur();
-
     /**
      * Tests de la fonction de cryptage de mot de passe
      */
