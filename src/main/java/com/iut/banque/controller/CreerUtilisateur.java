@@ -155,10 +155,10 @@ public class CreerUtilisateur extends ActionSupport {
 		this.banque = (BanqueFacade) context.getBean("banqueFacade");
 	}
 
-	public String HashPassword(String password) throws IllegalArgumentException {
+	public String hashPassword(String password) throws IllegalArgumentException {
 		String bcryptHashString = BCrypt.withDefaults().hashToString(12, password.toCharArray());
-		BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), bcryptHashString);
-		if (result.verified) {
+		BCrypt.Result verifyResult = BCrypt.verifyer().verify(password.toCharArray(), bcryptHashString);
+		if (verifyResult.verified) {
 			return bcryptHashString;
 		}
 		else {
@@ -212,9 +212,9 @@ public class CreerUtilisateur extends ActionSupport {
 	public String creationUtilisateur() {
 		try {
 			if (client) {
-				banque.createClient(userId, HashPassword(userPwd), nom, prenom, adresse, male, numClient);
+				banque.createClient(userId, hashPassword(userPwd), nom, prenom, adresse, male, numClient);
 			} else {
-				banque.createManager(userId, HashPassword(userPwd), nom, prenom, adresse, male);
+				banque.createManager(userId, hashPassword(userPwd), nom, prenom, adresse, male);
 			}
 			this.message = "Le nouvel utilisateur avec le user id '" + userId + "' a bien été crée.";
 			this.result = "SUCCESS";
