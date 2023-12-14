@@ -209,32 +209,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/quentindupont/Code/Java/qualiteDev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/quentindupont/Code/Java/qualiteDev/WebContent/js",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebContent/js" />
+      <recent name="$PROJECT_DIR$/WebContent/JSP" />
+      <recent name="C:\Users\hugot\Desktop\Qualite-dev\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\IUT\_2023-2024-BUT\BUT3 - R5.A.08 - Qualité Dev\_00_ASBank2023\WebContent" />
       <recent name="C:\IUT\_2023-2024-BUT\BUT3 - R5.A.08 - Qualité Dev\_00_ASBank2023\WebContent\WEB-INF" />
       <recent name="C:\Users\hugot\Desktop\Qualite-dev\photos\38" />
       <recent name="C:\Users\hugot\Desktop\Qualite-dev" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hugot\Desktop\Qualite-dev\src" />
     </key>
   </component>
   <component name="RunManager" selected="Maven._00_ASBank2023 [clean,install]">
@@ -452,7 +454,7 @@
       <workItem from="1699456408200" duration="1544000" />
       <workItem from="1699458013112" duration="334000" />
       <workItem from="1699458441918" duration="597000" />
-      <workItem from="1702452308530" duration="5093000" />
+      <workItem from="1702452308530" duration="17731000" />
     </task>
     <servers />
   </component>

@@ -9,11 +9,7 @@
 <link rel="stylesheet" href="/_00_ASBank2023/style/style.css" />
 </head>
 <body>
-	<div class="btnLogout">
-		<s:form name="myForm" action="logout" method="POST">
-			<s:submit name="Retour" value="Logout" />
-		</s:form>
-	</div>
+
 	<h1>Tableau de bord - Gestionnaire</h1>
 	
 	<p>Bienvenue <b><s:property value="connectedUser.prenom" /> <s:property value="connectedUser.nom" /></b> !</p>
@@ -35,6 +31,17 @@
 		</s:url>
 		<s:a href="%{urlAjoutUtilisateur}">Ajout d'un utilisateur</s:a>
 	</p>
+	<p>
+		<s:url action="urlChangementPwd" var="urlChangementPwd" >
+		</s:url>
+		<s:a href="%{urlChangementPwd}">Changement de mot de passe</s:a>
+	</p>
+	<div>
+		<s:form name="myForm" action="logout" method="POST">
+			<s:submit name="Retour" value="Logout" />
+		</s:form>
+	</div>
+
 </body>
 <jsp:include page="/JSP/Footer.jsp" />
 </html>

@@ -297,5 +297,9 @@
 			<result>/JSP/CreerUtilisateur.jsp</result>
 		</action>
 
+		<action name="urlChangementPwd" class="com.iut.banque.controller.CreerUtilisateur">
+			<result>/JSP/ChangementPwd.jsp</result>
+		</action>
+
 	</package>
 </struts>

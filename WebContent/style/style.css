@@ -69,3 +69,8 @@ footer
 	top : 90px;
 	left : 30px;
 }
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
