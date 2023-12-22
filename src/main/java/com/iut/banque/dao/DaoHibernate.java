@@ -255,6 +255,7 @@ public class DaoHibernate implements IDao {
 	 */
 	@Override
 	public void disconnect() {
+		sessionFactory.close();
 		System.out.println("Déconnexion de la DAO.");
 	}
 
