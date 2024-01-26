@@ -47,7 +47,8 @@ public class DaoHibernate implements IDao {
 	 * construction de la DAO.
 	 * 
 	 * @param sessionFactory
-	 *            : la session factory nécessaire à la gestion des sessions
+	 *                       : la session factory nécessaire à la gestion des
+	 *                       sessions
 	 */
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
@@ -55,7 +56,8 @@ public class DaoHibernate implements IDao {
 
 	/**
 	 * {@inheritDoc}
-	 * @throws IllegalOperationException 
+	 * 
+	 * @throws IllegalOperationException
 	 */
 	@Override
 	public CompteAvecDecouvert createCompteAvecDecouvert(double solde, String numeroCompte, double decouvertAutorise,
@@ -194,19 +196,25 @@ public class DaoHibernate implements IDao {
 		if (userId == null || userPwd == null) {
 			return false;
 		} else {
-			session = sessionFactory.openSession();
-			userId = userId.trim();
-			if ("".equals(userId) || "".equals(userPwd)) {
-				return false;
-			} else {
-				session = sessionFactory.getCurrentSession();
-				Utilisateur user = session.get(Utilisateur.class, userId);
-				if (user == null) {
+			try {
+				sessionFactory.openSession();
+				userId = userId.trim();
+				if ("".equals(userId) || "".equals(userPwd)) {
 					return false;
+				} else {
+					session = sessionFactory.getCurrentSession();
+					Utilisateur user = session.get(Utilisateur.class, userId);
+					if (user == null) {
+						return false;
+					}
+					BCrypt.Result result = BCrypt.verifyer().verify(userPwd.toCharArray(), user.getUserPwd());
+					return (result.verified);
 				}
-				BCrypt.Result result = BCrypt.verifyer().verify(userPwd.toCharArray(), user.getUserPwd());
-				return (result.verified);
+			} catch (Exception e) {
+			System.out.println(e);
+				return false;
 			}
+
 		}
 	}
 
