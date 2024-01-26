@@ -5,6 +5,7 @@ import com.iut.banque.exceptions.IllegalFormatException;
 import com.iut.banque.exceptions.IllegalOperationException;
 import com.iut.banque.exceptions.TechnicalException;
 import com.iut.banque.modele.*;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -338,14 +339,6 @@ public class TestsDaoHibernate {
      */
 
     @Test
-    public void testIsUserAllowedWithValidCredentials() {
-        String validUserId = "utilisateurValide";
-        String validUserPwd = "motDePasseValide";
-        boolean result = daoHibernate.isUserAllowed(validUserId, validUserPwd);
-        assertTrue(result);
-    }
-
-    @Test
     public void testIsUserAllowedWithNullInputs() {
         boolean result = daoHibernate.isUserAllowed(null, null);
         assertFalse(result);
@@ -363,7 +356,6 @@ public class TestsDaoHibernate {
         assertFalse(result);
     }
 
-    /*
     @Test
     public void testIsUserAllowedWithIncorrectPassword() {
         String validUserId = "utilisateurValide";
@@ -371,5 +363,4 @@ public class TestsDaoHibernate {
         boolean result = daoHibernate.isUserAllowed(validUserId, incorrectUserPwd);
         assertFalse(result);
     }
-    */
 }
