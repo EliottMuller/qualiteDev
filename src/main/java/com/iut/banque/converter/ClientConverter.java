@@ -40,19 +40,7 @@ public class ClientConverter extends StrutsTypeConverter {
 	 * @param dao
 	 */
 	public ClientConverter(IDao dao) {
-		System.out.println("=========================");
-		System.out.println("Création du convertisseur de client");
 		ClientConverter.dao = dao;
-		// System.out.println("DAO injectée : " + dao);
-	}
-
-	/**
-	 * Constructeur sans paramêtre pour le ClientConverter
-	 */
-	public ClientConverter() {
-		System.out.println("=========================");
-		System.out.println("Création du convertisseur de client");
-		// System.out.println("DAO : " + dao);
 	}
 
 	/**
