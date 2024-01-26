@@ -39,11 +39,6 @@ public class DaoHibernate implements IDao {
 	private SessionFactory sessionFactory;
 	private static final Logger LOGGER = Logger.getLogger(DaoHibernate.class.toString());
 
-	public DaoHibernate() {
-		System.out.println("==================");
-		System.out.println("Création de la Dao");
-	}
-
 	/**
 	 * Setter pour la SessionFactory.
 	 * 
@@ -268,7 +263,6 @@ public class DaoHibernate implements IDao {
 	@Override
 	public void disconnect() {
 		sessionFactory.close();
-		System.out.println("Déconnexion de la DAO.");
 	}
 
 }

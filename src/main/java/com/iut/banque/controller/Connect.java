@@ -28,7 +28,6 @@ public class Connect extends ActionSupport {
 	 *         factory
 	 */
 	public Connect() {
-		System.out.println("In Constructor from Connect class ");
 		ApplicationContext context = WebApplicationContextUtils
 				.getRequiredWebApplicationContext(ServletActionContext.getServletContext());
 		this.banque = (BanqueFacade) context.getBean("banqueFacade");
@@ -43,8 +42,6 @@ public class Connect extends ActionSupport {
 	 *         échec
 	 */
 	public String login() {
-		System.out.println("Essai de login - 20180512...");
-
 		if (userCde == null || userPwd == null) {
 			return "ERROR";
 		}
@@ -60,16 +57,12 @@ public class Connect extends ActionSupport {
 
 		switch (loginResult) {
 		case LoginConstants.USER_IS_CONNECTED:
-			System.out.println("user logged in");
 			return "SUCCESS";
 		case LoginConstants.MANAGER_IS_CONNECTED:
-			System.out.println("manager logged in");
 			return "SUCCESSMANAGER";
 		case LoginConstants.LOGIN_FAILED:
-			System.out.println("login failed");
 			return "ERROR";
 		default:
-			System.out.println("error");
 			return "ERROR";
 		}
 	}
@@ -134,7 +127,6 @@ public class Connect extends ActionSupport {
 	}
 
 	public String logout() {
-		System.out.println("Logging out");
 		banque.logout();
 		return "SUCCESS";
 	}

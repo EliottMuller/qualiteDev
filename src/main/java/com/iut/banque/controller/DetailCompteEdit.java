@@ -10,15 +10,6 @@ public class DetailCompteEdit extends DetailCompte {
 	private String decouvertAutorise;
 
 	/**
-	 * Constructeur sans argument de DetailCompteEdit
-	 */
-	public DetailCompteEdit() {
-		super();
-		System.out.println("======================================");
-		System.out.println("Dans le constructeur DetailCompteEdit");
-	}
-
-	/**
 	 * @return the decouvertAutorise
 	 */
 	public String getDecouvertAutorise() {
