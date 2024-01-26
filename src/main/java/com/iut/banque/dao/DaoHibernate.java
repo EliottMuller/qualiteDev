@@ -1,5 +1,8 @@
 package com.iut.banque.dao;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import java.util.HashMap;
 import java.util.List;
@@ -34,6 +37,7 @@ import com.iut.banque.modele.Utilisateur;
 public class DaoHibernate implements IDao {
 
 	private SessionFactory sessionFactory;
+	private static final Logger LOGGER = Logger.getLogger(DaoHibernate.class.toString());
 
 	public DaoHibernate() {
 		System.out.println("==================");
@@ -211,7 +215,7 @@ public class DaoHibernate implements IDao {
 					return (result.verified);
 				}
 			} catch (Exception e) {
-			System.out.println(e);
+			LOGGER.log(Level.SEVERE, "erreur pendant la création de la session ",e);
 				return false;
 			}
 
