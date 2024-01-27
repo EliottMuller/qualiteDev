@@ -4,6 +4,9 @@ import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 import com.iut.banque.exceptions.IllegalFormatException;
 import com.iut.banque.exceptions.InsufficientFundsException;
 import com.iut.banque.facade.BanqueFacade;
@@ -19,6 +22,7 @@ public class DetailCompte extends ActionSupport {
 	private String montant;
 	private String error;
 	protected Compte compte;
+	private static final Logger LOGGER = Logger.getLogger(DetailCompte.class.toString());
 
 	/**
 	 * Constructeur du controlleur DetailCompte
@@ -129,13 +133,13 @@ public class DetailCompte extends ActionSupport {
 			banque.debiter(compte, Double.parseDouble(montant.trim()));
 			return "SUCCESS";
 		} catch (NumberFormatException e) {
-			e.printStackTrace();
+			LOGGER.log(Level.SEVERE, "débit : erreur inconnue lors de la tentative de débit ",e);
 			return "ERROR";
 		} catch (InsufficientFundsException ife) {
-			ife.printStackTrace();
+			LOGGER.log(Level.WARNING, "débit : pas assez d'argent sur le compte ",ife);
 			return "NOTENOUGHFUNDS";
 		} catch (IllegalFormatException e) {
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "débit : quantité d'argent entré négatif ",e);
 			return "NEGATIVEAMOUNT";
 		}
 	}
@@ -152,10 +156,10 @@ public class DetailCompte extends ActionSupport {
 			banque.crediter(compte, Double.parseDouble(montant.trim()));
 			return "SUCCESS";
 		} catch (NumberFormatException nfe) {
-			nfe.printStackTrace();
+			LOGGER.log(Level.SEVERE, "crédit : erreur inconnue lors de la tentative de crédit ",nfe);
 			return "ERROR";
 		} catch (IllegalFormatException e) {
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "crédit : quantité d'argent entré négatif ",e);
 			return "NEGATIVEAMOUNT";
 		}
 	}

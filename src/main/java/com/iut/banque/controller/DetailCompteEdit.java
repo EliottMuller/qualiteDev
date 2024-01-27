@@ -1,5 +1,8 @@
 package com.iut.banque.controller;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 import com.iut.banque.exceptions.IllegalFormatException;
 import com.iut.banque.exceptions.IllegalOperationException;
 import com.iut.banque.modele.CompteAvecDecouvert;
@@ -8,6 +11,7 @@ public class DetailCompteEdit extends DetailCompte {
 
 	private static final long serialVersionUID = 1L;
 	private String decouvertAutorise;
+	private static final Logger LOGGER = Logger.getLogger(DetailCompteEdit.class.toString());
 
 	/**
 	 * @return the decouvertAutorise
@@ -38,7 +42,7 @@ public class DetailCompteEdit extends DetailCompte {
 			banque.changeDecouvert((CompteAvecDecouvert) getCompte(), decouvert);
 			return "SUCCESS";
 		} catch (NumberFormatException nfe) {
-			nfe.printStackTrace();
+			LOGGER.log(Level.SEVERE, "erreur lors du changement de découvert ",nfe);
 			return "ERROR";
 		} catch (IllegalFormatException e) {
 			return "NEGATIVEOVERDRAFT";

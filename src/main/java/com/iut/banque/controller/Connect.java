@@ -2,6 +2,9 @@ package com.iut.banque.controller;
 
 import java.util.Map;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -20,6 +23,7 @@ public class Connect extends ActionSupport {
 	private String userCde;
 	private String userPwd;
 	private BanqueFacade banque;
+	private static final Logger LOGGER = Logger.getLogger(Connect.class.toString());
 
 	/**
 	 * Constructeur de la classe Connect
@@ -51,7 +55,7 @@ public class Connect extends ActionSupport {
 		try {
 			loginResult = banque.tryLogin(userCde, userPwd);
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOGGER.log(Level.SEVERE, "erreur lors de la connection ",e);
 			loginResult = LoginConstants.ERROR;
 		}
 
