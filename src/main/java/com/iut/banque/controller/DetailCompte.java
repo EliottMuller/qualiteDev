@@ -136,10 +136,10 @@ public class DetailCompte extends ActionSupport {
 			LOGGER.log(Level.SEVERE, "débit : erreur inconnue lors de la tentative de débit ",e);
 			return "ERROR";
 		} catch (InsufficientFundsException ife) {
-			LOGGER.log(Level.WARNING, "débit : pas assez d'argent sur le compte ",ife);
+			LOGGER.log(Level.WARNING, "débit : pas assez d argent sur le compte ",ife);
 			return "NOTENOUGHFUNDS";
 		} catch (IllegalFormatException e) {
-			LOGGER.log(Level.WARNING, "débit : quantité d'argent entré négatif ",e);
+			LOGGER.log(Level.WARNING, "débit : quantité d argent entré négatif ",e);
 			return "NEGATIVEAMOUNT";
 		}
 	}
@@ -159,7 +159,7 @@ public class DetailCompte extends ActionSupport {
 			LOGGER.log(Level.SEVERE, "crédit : erreur inconnue lors de la tentative de crédit ",nfe);
 			return "ERROR";
 		} catch (IllegalFormatException e) {
-			LOGGER.log(Level.WARNING, "crédit : quantité d'argent entré négatif ",e);
+			LOGGER.log(Level.WARNING, "crédit : quantité d argent entré négatif ",e);
 			return "NEGATIVEAMOUNT";
 		}
 	}
