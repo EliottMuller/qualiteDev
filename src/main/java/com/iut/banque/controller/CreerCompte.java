@@ -1,5 +1,8 @@
 package com.iut.banque.controller;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -25,6 +28,7 @@ public class CreerCompte extends ActionSupport {
 	private boolean result;
 	private BanqueFacade banque;
 	private Compte compte;
+	private static final Logger LOGGER = Logger.getLogger(CreerCompte.class.toString());
 
 	/**
 	 * @param compte
@@ -189,7 +193,7 @@ public class CreerCompte extends ActionSupport {
 				try {
 					banque.createAccount(numeroCompte, client, decouvertAutorise);
 				} catch (IllegalOperationException e) {
-					e.printStackTrace();
+					LOGGER.log(Level.SEVERE, "erreur lors de la création de compte ",e);
 				}
 			} else {
 				banque.createAccount(numeroCompte, client);
