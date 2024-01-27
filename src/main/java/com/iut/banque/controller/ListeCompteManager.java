@@ -141,10 +141,10 @@ public class ListeCompteManager extends ActionSupport {
 			banque.deleteUser(client);
 			return "SUCCESS";
 		} catch (TechnicalException e) {
-			LOGGER.log(Level.SEVERE, "erreur inconnue lors de la supression de l'utilisateur ",e);
+			LOGGER.log(Level.SEVERE, "erreur inconnue lors de la supression de l utilisateur ",e);
 			return "ERROR";
 		} catch (IllegalOperationException ioe) {
-			LOGGER.log(Level.WARNING, "erreur lors de la supression de l'utilisateur : compte non vide ",ioe);
+			LOGGER.log(Level.WARNING, "erreur lors de la supression de l utilisateur : compte non vide ",ioe);
 			return "NONEMPTYACCOUNT";
 		}
 	}
@@ -160,10 +160,10 @@ public class ListeCompteManager extends ActionSupport {
 			banque.deleteAccount(compte);
 			return "SUCCESS";
 		} catch (IllegalOperationException e) {
-			LOGGER.log(Level.SEVERE, "erreur lors de la supression de l'utilisateur : compte non vide ",e);
+			LOGGER.log(Level.SEVERE, "erreur lors de la supression de l utilisateur : compte non vide ",e);
 			return "NONEMPTYACCOUNT";
 		} catch (TechnicalException e) {
-			LOGGER.log(Level.SEVERE, "erreur inconnue lors de la supression de l'utilisateur ",e);
+			LOGGER.log(Level.SEVERE, "erreur inconnue lors de la supression de l utilisateur ",e);
 			return "ERROR";
 		}
 	}
